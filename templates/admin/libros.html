@@ -1,0 +1,68 @@
+{% include 'sitio/header.html' %}
+
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-5">
+            <div class="card">
+                <div class="card-header">
+                    Datos del Libro
+                </div>
+                <form action="/admin/libros/guardar" method="post">
+                    <div class="card-body">
+
+                        <div class="mb-3">
+                            <label for="txtTitulo" class="form-label">Titulo:</label>
+                            <input type="text" class="form-control" name="txtTitulo" id="txtTitulo"
+                                aria-describedby="helpId" placeholder="titulo del libro">
+                        </div>
+                        <div class="mb-3">
+                            <label for="txtImagen" class="form-label">Imagen:</label>
+                            <input type="text" class="form-control" name="txtImagen" id="txtImagen"
+                                aria-describedby="helpId" placeholder="Imagen del libro">
+                        </div>
+                        <div class="mb-3">
+                            <label for="txtUrl" class="form-label">URL:</label>
+                            <input type="text" class="form-control" name="txtUrl" id="txtUrl" aria-describedby="helpId"
+                                placeholder="Url del libro">
+                        </div>
+
+                    </div>
+                    <div class="card-footer text-muted">
+                        <button type="submit" class="btn btn-primary">Agregar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <div class="table-responsive">
+                <table class="table table-primary">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Titulo</th>
+                            <th scope="col">Imagen</th>
+                            <th scope="col">URL</th>
+                            <th scope="col">Accion</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="">
+                            <td scope="row">01</td>
+                            <td>Yo antes de ti</td>
+                            <td>imagen.jpg</td>
+                            <td>http://</td>
+                            <td>Eliminar</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+
+{% include 'sitio/footer.html' %}
