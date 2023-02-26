@@ -1,55 +1,22 @@
 {% include 'sitio/header.html' %}
 
-
+<br>
 <div class="row">
+
+    {% for libro in list_libros %}
     <div class="col-md-3">
         <div class="card">
-            <img class="card-img-top" src="https://www.tematika.com/media/catalog/Ilhsa/Imagenes/579114.jpg"
-                alt="Title">
+            <img class="card-img-top" src="/img/{{ libro[3] }}" alt="Title">
             <div class="card-body">
-                <h4 class="card-title">YO ANTES DE TI</h4>
+                <h4 class="card-title">{{ libro[1] }}</h4>
                 <p class="card-text">
-                    <a name="" id="" class="btn btn-primary" href="#" role="button">Descarga</a>
+                    <a name="" id="" class="btn btn-success" href="#" role="button">Descarga</a>
                 </p>
             </div>
         </div>
     </div>
-    <div class="col-md-3">
-        <div class="card">
-            <img class="card-img-top" src="https://www.tematika.com/media/catalog/Ilhsa/Imagenes/579114.jpg"
-                alt="Title">
-            <div class="card-body">
-                <h4 class="card-title">YO ANTES DE TI</h4>
-                <p class="card-text">
-                    <a name="" id="" class="btn btn-primary" href="#" role="button">Descarga</a>
-                </p>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3">
-        <div class="card">
-            <img class="card-img-top" src="https://www.tematika.com/media/catalog/Ilhsa/Imagenes/579114.jpg"
-                alt="Title">
-            <div class="card-body">
-                <h4 class="card-title">YO ANTES DE TI</h4>
-                <p class="card-text">
-                    <a name="" id="" class="btn btn-primary" href="#" role="button">Descarga</a>
-                </p>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3">
-        <div class="card">
-            <img class="card-img-top" src="https://www.tematika.com/media/catalog/Ilhsa/Imagenes/579114.jpg"
-                alt="Title">
-            <div class="card-body">
-                <h4 class="card-title">YO ANTES DE TI</h4>
-                <p class="card-text">
-                    <a name="" id="" class="btn btn-primary" href="#" role="button">Descarga</a>
-                </p>
-            </div>
-        </div>
-    </div>
+    {% endfor %}
+
 </div>
 
 

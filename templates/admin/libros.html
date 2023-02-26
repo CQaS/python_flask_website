@@ -1,4 +1,4 @@
-{% include 'sitio/header.html' %}
+{% include 'admin/header.html' %}
 
 <br>
 <div class="container">
@@ -42,11 +42,12 @@
                             <th scope="col">ID</th>
                             <th scope="col">Titulo</th>
                             <th scope="col">Imagen</th>
-                            <th scope="col">URL</th>
+                            <th scope="col">Obtener</th>
                             <th scope="col">Accion</th>
                         </tr>
                     </thead>
                     <tbody>
+
                         {% for libro in list_libros %}
                         <tr>
                             <td scope="row">{{ libro[0] }}</td>
@@ -54,7 +55,10 @@
                             <td>
                                 <img width="60" src="/img/{{ libro[3] }}" class="img-fluid rounded-top" alt="">
                             </td>
-                            <td>{{ libro[2] }}</td>
+                            <td>
+                                <a name="" id="" class="btn btn-secondary" href="http://www.{{ libro[2] }}"
+                                    role="button">Descargar</a>
+                            </td>
                             <td>
                                 <form action="/admin/libros/borrar" method="post">
                                     <input value='{{ libro[0] }}' type="hidden" name="txtId" id="txtId">
@@ -63,6 +67,7 @@
                             </td>
                         </tr>
                         {% endfor %}
+
                     </tbody>
                 </table>
             </div>
@@ -74,4 +79,4 @@
 
 
 
-{% include 'sitio/footer.html' %}
+{% include 'admin/footer.html' %}

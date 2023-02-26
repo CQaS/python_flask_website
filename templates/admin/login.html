@@ -8,8 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS v5.2.1 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link href="/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 
 </head>
 
@@ -17,7 +16,6 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-
             </div>
             <div class="col-md-4">
                 <br>
@@ -30,7 +28,7 @@
 
                             <div class="mb-3">
                                 <label for="txtUsuario|" class="form-label">Usuario</label>
-                                <input type="text" class="form-control" name="txtUsuario|" id="txtUsuario|"
+                                <input type="text" class="form-control" name="txtUsuario" id="txtUsuario"
                                     aria-describedby="helpId" placeholder="Ingresa Usuario">
                             </div>
 
@@ -45,7 +43,11 @@
                         </form>
                     </div>
                     <div class="card-footer text-muted">
-
+                        {% if msg %}
+                        <div class="alert alert-primary" role="alert">
+                            <center><strong>{{ msg }}</strong></center>
+                        </div>
+                        {% endif %}
                     </div>
                 </div>
             </div>
