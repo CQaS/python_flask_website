@@ -146,12 +146,10 @@ def admin_libros_borrar():
 
     return redirect('/admin/libros')
 
-
 @app.route('/admin/salir')
 def admin_salir():
     session.clear()
     return render_template('admin/login.html')
-
 
 if __name__ == '__main__':
     app.run(debug=True)
